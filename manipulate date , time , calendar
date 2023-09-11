@@ -1,0 +1,21 @@
+current_date=$(date)
+echo "Current date and time: $current_date"
+
+
+current_date_only=$(date +"%Y-%m-%d")
+echo "Current date only: $current_date_only"
+
+
+current_time_only=$(date +"%H:%M:%S")
+echo "Current time only: $current_time_only"
+
+
+days_to_add=7
+future_date=$(date -d "+$days_to_add days" +"%Y-%m-%d")
+echo "Date $days_to_add days from now: $future_date"
+specific_month=9
+specific_year=2023
+cal $specific_month $specific_year
+specific_date="2023-09-10"
+day_of_week=$(date -d "$specific_date" +"%A")
+echo "Day of the week for $specific_date: $day_of_week"
